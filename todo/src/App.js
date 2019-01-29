@@ -33,6 +33,13 @@ class App extends Component {
 			completed: false,
 		};
 		this.props.submit_todo(newTodo);
+		this.setState({
+			todo: {
+				value: '',
+				completed: false,
+				id: '',
+			},
+		});
 	};
 
 	handleDelete = (e, id) => {
